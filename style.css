@@ -13,39 +13,84 @@
     src: url(fonts/MinecrafterAlt.ttf);
 }
 
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'MinecraftAlt';
+
+}
+
+.wrapper{
+    background: rgb(15, 15, 15);
+    position: relative;
+    width: 100%;
+}
+
+.wrapper nav{
+    display: flex;
+    max-width: calc(100% - 200px);
+    background: black;
+    margin: 0 auto;
+    height: 70px;
+    justify-content: space-between;
+}
+
+nav .content{
+    display: flex;
+    align-items: center;
+}
+
+nav .content .links{
+    margin-left: 80px;
+    display: flex;
+}
+
+.content .logo a{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.content .links li{
+    list-style: none;
+    
+}
+
+.content .links li a{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 9px 17px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.active{
+    background: rgb(35, 35, 35);
+}
+
+.content .links li:hover a{
+    background: rgb(35, 35, 35);
+}
+
+.wrapper .search-icon{
+    color: #fff;
+}
+
 body{
     margin: 0%;
     padding: 0%;
-  
-}
-
-.Sec1{
-    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) url('NoobKumar.jpg');
+    background:  url('NoobKumar.jpg');
     background-position: center;
     background-size: cover;
     height: 100vh;
+    background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
 
-
-.W-btn{
-    color: transparent;
-    margin: 0%;
-    padding: 0%;
-    background-image: url(mcjewild2.jpg);
-
-    background-size: cover;
-    background-clip: text;
-    -webkit-background-clip: text;
-    position: absolute;
-    top: 1%;
-    right: 30%;
-    -webkit-text-stroke: 1px black;
-    font-family: 'MinecraftReg';
-    font-size: 45px;
-
-}
 
 
 .p-1{
@@ -59,21 +104,9 @@ body{
     float: left;
 }
 
-.C{
-    color: transparent;
-    background-image: url(SUB.png);
-    background-size: cover;
-    background-clip: text;
-    -webkit-background-clip: text;
-    position: absolute;
-    top: 5%;
-    left: 1%;
-    font-family: 'MinecraftReg';
-    -webkit-text-stroke: 1.5px black;
-    font-size:35px;
-    cursor: pointer;
+
     
-}
+
 
 .C:hover{
     color: rgb(147, 3, 3);
@@ -165,6 +198,47 @@ font-size: 25px;
     position: absolute;
     top: 80%;
     left: 1%;
+}
+
+/* Responive code start */
+@media screen and(max-width: 1250px){
+    .wrapper nav{
+        max-width: 100%;
+        padding: 0 20px;
+    }
+}
+    
+nav .content .links{
+    margin-left: 30px;
+}
+
+.content .links li a{
+    padding: 1px 13px;
+}
+
+@media  screen and (max-width: 900px){
+    nav .content .links{
+        display: block;
+        position: fixed;
+        background: rgb(15, 15, 15);
+        height: 100%;
+        width: 100%;
+        top: 70px;
+        left: 0;
+        margin-left: 0;
+        max-width: 350px;
+    }
+}
+
+.content .links li{
+    margin: 15px 20px;
+}
+
+.content .links li a{
+    line-height: 40px;
+    font-size: 20px;
+    display: block;
+    padding: 8px 18px;
 }
 
 
